@@ -118,7 +118,7 @@ namespace NVelocity.Runtime.Resource
 			{
 				try
 				{
-					Type type = Type.GetType(resourceManagerCacheClassName);
+					Type type = NVelocity.Util.TypeUtils.GetType(resourceManagerCacheClassName);
 					o = Activator.CreateInstance(type);
 				}
 				catch(Exception)

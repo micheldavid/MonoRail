@@ -26,7 +26,7 @@ namespace NVelocity.Runtime.Directive
 		{
 			directiveTypeName = directiveTypeName.Replace(';', ',');
 
-			Type type = Type.GetType(directiveTypeName, false, false);
+			Type type = NVelocity.Util.TypeUtils.GetType(directiveTypeName);
 
 			if (type == null)
 			{

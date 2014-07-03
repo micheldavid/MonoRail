@@ -39,7 +39,7 @@ namespace NVelocity.Tool
 		{
 			try
 			{
-				Type type = Type.GetType(className);
+				Type type = NVelocity.Util.TypeUtils.GetType(className);
 				Object o = Activator.CreateInstance(type);
 				return o;
 			}

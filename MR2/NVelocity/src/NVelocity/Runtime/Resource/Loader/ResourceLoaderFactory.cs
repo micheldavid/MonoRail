@@ -33,7 +33,7 @@ namespace NVelocity.Runtime.Resource.Loader
 				// since properties are parsed into arrays with commas, 
 				// something else needed to be used
 				loaderClassName = loaderClassName.Replace(';', ',');
-				Type loaderType = Type.GetType(loaderClassName);
+				Type loaderType = NVelocity.Util.TypeUtils.GetType(loaderClassName);
 				Object o = Activator.CreateInstance(loaderType);
 				ResourceLoader loader = (ResourceLoader) o;
 

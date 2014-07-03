@@ -212,7 +212,7 @@ namespace NVelocity.Runtime
 
 				try
 				{
-					o = SupportClass.CreateNewInstance(Type.GetType(rm));
+					o = SupportClass.CreateNewInstance(TypeUtils.GetType(rm));
 				}
 				catch(System.Exception)
 				{
@@ -406,7 +406,7 @@ namespace NVelocity.Runtime
 
 				try
 				{
-					Type rmType = Type.GetType(rm);
+					Type rmType = TypeUtils.GetType(rm);
 					o = Activator.CreateInstance(rmType);
 				}
 				catch(System.Exception)
@@ -553,7 +553,7 @@ namespace NVelocity.Runtime
 
 			directiveManagerTypeName = directiveManagerTypeName.Replace(';', ',');
 
-			Type dirMngType = Type.GetType(directiveManagerTypeName, false, false);
+			Type dirMngType = TypeUtils.GetType(directiveManagerTypeName, false, false);
 
 			if (dirMngType == null)
 			{

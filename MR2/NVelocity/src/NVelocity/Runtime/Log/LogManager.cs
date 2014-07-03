@@ -96,7 +96,7 @@ namespace NVelocity.Runtime.Log
 
 					try
 					{
-						Type type = Type.GetType(className);
+						Type type = NVelocity.Util.TypeUtils.GetType(className);
 						o = Activator.CreateInstance(type);
 						logSystem = o as ILogSystem;
 						if (logSystem == null)
